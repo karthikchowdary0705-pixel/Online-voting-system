@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Register - CloudVote</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">☁️ CloudVote</div>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+    </div>
+
+</nav>
+
+<div class="form-container">
+
+    <h1>Create Account</h1>
+
+    {% with messages = get_flashed_messages() %}
+        {% for message in messages %}
+            <div class="message">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endwith %}
+
+    <form method="POST">
+
+        <label>Username</label>
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Enter username"
+            required
+        >
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter password"
+            required
+        >
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+    <p>
+        Already registered?
+        <a href="/login">Login here</a>
+    </p>
+
+</div>
+
+</body>
+</html>

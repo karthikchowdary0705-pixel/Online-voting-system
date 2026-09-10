@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Election Results</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">☁️ CloudVote</div>
+
+    <div>
+
+        <a href="/">Home</a>
+
+        {% if session.get("user_id") %}
+            <a href="/vote">Vote</a>
+            <a href="/logout">Logout</a>
+        {% else %}
+            <a href="/login">Login</a>
+        {% endif %}
+
+    </div>
+
+</nav>
+
+<div class="result-container">
+
+    <h1>Election Results</h1>
+
+    <h3>Total Votes: {{ total_votes }}</h3>
+
+    {% for candidate in candidates %}
+
+    <div class="result-card">
+
+        <div>
+
+            <h2>{{ candidate.name }}</h2>
+
+            <p>{{ candidate.party }}</p>
+
+        </div>
+
+        <div class="votes">
+
+            {{ candidate.votes }} Votes
+
+        </div>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+</body>
+</html>

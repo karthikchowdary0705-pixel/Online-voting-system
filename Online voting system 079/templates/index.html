@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CloudVote - Online Voting System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f6ff;
+        }
+
+        nav {
+            background: #172554;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background: white;
+            color: #2563eb;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 50px;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px #ccc;
+        }
+
+        footer {
+            text-align: center;
+            background: #172554;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>☁️ CloudVote</h2>
+
+        <div>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+            <a href="/result">Results</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+
+        <h1>Cloud-Based Online Voting System</h1>
+
+        <p>
+            Welcome to CloudVote
+        </p>
+
+        <p>
+            A simple and easy online voting system
+            using Python Flask and SQLite.
+        </p>
+
+        <a class="button" href="/register">
+            Register
+        </a>
+
+        <a class="button" href="/login">
+            Login
+        </a>
+
+    </div>
+
+    <div class="features">
+
+        <div class="card">
+            <h2>☁️ Cloud Based</h2>
+            <p>Access the voting system through a web browser.</p>
+        </div>
+
+        <div class="card">
+            <h2>🔐 Secure Login</h2>
+            <p>Users can register and login before voting.</p>
+        </div>
+
+        <div class="card">
+            <h2>🗳️ One Vote</h2>
+            <p>Each user can cast one vote.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        CloudVote © 2026 | Cloud Computing Mini Project
+    </footer>
+
+</body>
+</html>
