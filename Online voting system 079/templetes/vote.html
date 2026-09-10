@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Cast Your Vote</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">☁️ CloudVote</div>
+
+    <div>
+
+        <span>Welcome, {{ username }}</span>
+
+        <a href="/result">Results</a>
+
+        <a href="/logout">Logout</a>
+
+    </div>
+
+</nav>
+
+<div class="vote-container">
+
+    <h1>Cast Your Vote</h1>
+
+    <p>Select one candidate.</p>
+
+    <form method="POST" action="/cast_vote">
+
+        {% for candidate in candidates %}
+
+        <label class="candidate">
+
+            <input
+                type="radio"
+                name="candidate"
+                value="{{ candidate.id }}"
+                required
+            >
+
+            <div>
+
+                <h2>{{ candidate.name }}</h2>
+
+                <p>{{ candidate.party }}</p>
+
+            </div>
+
+        </label>
+
+        {% endfor %}
+
+        <button type="submit">
+            🗳️ Submit Vote
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

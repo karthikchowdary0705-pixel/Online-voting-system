@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>CloudVote | Online Voting System</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4f7fb;
+        color: #222;
+    }
+
+    nav {
+        background: #172554;
+        color: white;
+        padding: 18px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+        font-size: 16px;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    .hero {
+        min-height: 520px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(135deg, #2563eb, #7c3aed);
+        color: white;
+        padding: 40px 20px;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 35px;
+    }
+
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 14px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        background: white;
+        color: #2563eb;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
+
+    .btn.secondary {
+        background: #172554;
+        color: white;
+    }
+
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 50px 8%;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        background: white;
+        width: 300px;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+        margin-bottom: 15px;
+        color: #172554;
+    }
+
+    .card p {
+        line-height: 1.6;
+        color: #555;
+    }
+
+    footer {
+        background: #172554;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    @media (max-width: 700px) {
+
+        nav {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        nav a {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .hero h1 {
+            font-size: 35px;
+        }
+
+        .hero p {
+            font-size: 17px;
+        }
+
+        .buttons {
+            flex-direction: column;
+        }
+
+        .btn {
+            width: 200px;
+            margin: auto;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- Navigation -->
+<nav>
+
+    <div class="logo">
+        ☁️ CloudVote
+    </div>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+        <a href="/result">Results</a>
+    </div>
+
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Cloud-Based Online Voting System
+        </h1>
+
+        <p>
+            Welcome to CloudVote, a simple web-based voting
+            platform developed using Python Flask and SQLite.
+            Register, login and cast your vote online.
+        </p>
+
+        <div class="buttons">
+
+            <a href="/register" class="btn">
+                📝 Register
+            </a>
+
+            <a href="/login" class="btn secondary">
+                🔐 Login
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Features -->
+<section class="features">
+
+    <div class="card">
+
+        <h2>☁️ Cloud Based</h2>
+
+        <p>
+            The application can be accessed through a
+            web browser and can be deployed on a cloud server.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🔐 User Login</h2>
+
+        <p>
+            Users can create an account and securely
+            login before accessing the voting page.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>🗳️ One Vote</h2>
+
+        <p>
+            Each registered user is allowed to cast
+            one vote in the demonstration election.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+    <p>
+        CloudVote © 2026 | Cloud Computing Mini Project
+    </p>
+
+</footer>
+```
+
+</body>
+</html>

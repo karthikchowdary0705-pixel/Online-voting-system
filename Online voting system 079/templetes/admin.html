@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Admin Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">☁️ CloudVote Admin</div>
+
+    <div>
+
+        <a href="/">Home</a>
+        <a href="/result">Results</a>
+
+    </div>
+
+</nav>
+
+<div class="admin-container">
+
+    <h1>Admin Dashboard</h1>
+
+    <h2>Candidate Results</h2>
+
+    <table>
+
+        <tr>
+            <th>Candidate</th>
+            <th>Party</th>
+            <th>Votes</th>
+        </tr>
+
+        {% for candidate in candidates %}
+
+        <tr>
+
+            <td>{{ candidate.name }}</td>
+
+            <td>{{ candidate.party }}</td>
+
+            <td>{{ candidate.votes }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <h2>Registered Voters</h2>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Status</th>
+        </tr>
+
+        {% for user in users %}
+
+        <tr>
+
+            <td>{{ user.id }}</td>
+
+            <td>{{ user.username }}</td>
+
+            <td>
+
+                {% if user.has_voted %}
+                    Voted
+                {% else %}
+                    Not Voted
+                {% endif %}
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>
